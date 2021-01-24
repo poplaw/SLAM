@@ -906,8 +906,8 @@ namespace SLAM
             {
                 if (TrackList.FocusedItem.Bounds.Contains(e.Location))
                 {
-                    foreach (Control Control in TrackContextMenu.Items) // everything invisible
-                        Control.Visible = false;
+                    foreach (var Control in TrackContextMenu.Items) // everything invisible
+                        //Control.Visible = false;
                     SetVolumeToolStripMenuItem.Visible = true; // always visible
                     ContextRefresh.Visible = true;
                     if (TrackList.SelectedItems.Count > 1)
@@ -927,8 +927,8 @@ namespace SLAM
                     }
                     else
                     {
-                        foreach (Control Control in TrackContextMenu.Items) // visible when only one selected AND is not running (all)
-                            Control.Visible = true;
+                        foreach (var Control in TrackContextMenu.Items) // visible when only one selected AND is not running (all)
+                            //Control.Visible = true;
                         LoadToolStripMenuItem.Visible = false;
                     }
                     // Maybe I should have used a case... Maybe...
